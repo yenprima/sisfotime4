@@ -1,0 +1,89 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-header-bar class="bar-balanced">
+			<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			<h1 class="title">KalTeng</h1>
+		</ion-header-bar>
+		<ion-content>
+			<div class="row">
+				<div class="col col-50" align="center">
+					<a class="item item-thumbnail-center" href="#/wisata">
+						<img src="img/ionic.png">
+						<h2>Wisata</h2>
+						<p>Daftar penginapan</p>
+					</a>
+				</div>
+				<div class="col col-50" align="center">
+					<a class="item item-thumbnail-center" ui-sref="penginapan">
+						<img src="img/ionic.png">
+						<h2>Penginapan</h2>
+						<p>Daftar penginapan</p>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" href="#/event">
+						<img src="img/ionic.png">
+						<h2>Event</h2>
+						<p>Daftar event-event</p>
+					</a>
+				</div>
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" ui-sref="transportasi">
+						<img src="img/ionic.png">
+						<h2>Transportasi</h2>
+						<p>Transportasi yang tersedia</p>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" ui-sref="peta">
+						<img src="img/ionic.png">
+						<h2>Peta</h2>
+						<p>Daftar event-event</p>
+					</a>
+				</div>
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" ui-sref="seni_budaya">
+						<img src="img/ionic.png">
+						<h2>Seni Budaya</h2>
+						<p>Transportasi yang tersedia</p>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" ui-sref="souvenir">
+						<img src="img/ionic.png">
+						<h2>Souvenir</h2>
+						<p>Macam-macam Souvenir</p>
+					</a>
+				</div>
+				<div class="col col-50"  align="center">
+					<a class="item item-thumbnail-center" ui-sref="kuliner">
+						<img src="img/ionic.png">
+						<h2>Kuliner</h2>
+						<p>Kuliner tradisional</p>
+					</a>
+				</div>
+			</div>
+		</ion-content>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="bar-balanced">
+			<h1 class="title">Pengaturan</h1>
+		</ion-header-bar>
+		<ion-content>
+			<ion-list>
+				<ion-item menu-close="" ng-click="login()">
+					Pembaharuan
+				</ion-item>
+				<ion-item href="#/app/search" menu-close="">
+					Tentang
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
