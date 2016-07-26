@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,4 +21,62 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
+})
+
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+ 
+  .state('beranda', {
+    url: '/beranda',
+    templateUrl: 'page/beranda.html'
+  })
+ 
+  .state('wisata', {
+    url: '/wisata',
+    templateUrl: 'page/wisata.html',
+	controller: 'SemuaBuku'
+  })
+  
+  .state('gunung_kembar1', {
+    url: '/gunung_kembar1',
+    templateUrl: 'page/gunung_kembar1.html'
+  })
+ 
+  .state('penginapan', {
+    url: '/penginapan',
+    templateUrl: 'page/penginapan.html',
+	controller: 'users'
+  })
+ 
+  .state('event', {
+    url: '/event',
+    templateUrl: 'page/event.html'
+  })
+ 
+  .state('transportasi', {
+    url: '/transportasi',
+    templateUrl: 'page/transportasi.html'
+  })
+ 
+  .state('peta', {
+    url: '/peta',
+    templateUrl: 'page/peta.html'
+  })
+ 
+  .state('seni_budaya', {
+    url: '/seni_budaya',
+    templateUrl: 'page/seni_budaya.html'
+  })
+ 
+  .state('souvenir', {
+    url: '/souvenir',
+    templateUrl: 'page/souvenir.html'
+  })
+ 
+  .state('kuliner', {
+    url: '/kuliner',
+    templateUrl: 'page/kuliner.html'
+  });
+ 
+  $urlRouterProvider.otherwise('/beranda');
 })
