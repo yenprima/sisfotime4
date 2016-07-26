@@ -66,6 +66,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   .state('kuliner', {
     url: '/kuliner',
     templateUrl: 'page/kuliner.html'
+  })
+ 
+  .state('detail-wisata', {
+    url: '/detail-wisata/:kode',
+    templateUrl: 'page/detail-wisata.html',
+	controller: 'DetailWisata'
   });
  
   $urlRouterProvider.otherwise('/beranda');

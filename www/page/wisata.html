@@ -6,10 +6,10 @@
 		
 		<div class="list">
 
-			<a class="item item-avatar" ng-repeat="buku in semua_buku" href="#">
-			  <img src="{{baseImageUrl + buku.gambar}}">
-			  <h2>{{buku.judul}}</h2>
-			  <p>{{buku.harga_sewa}}</p>
+			<a class="item item-avatar" ng-repeat="data in semua_buku" href="#/detail-wisata/{{data.id}}">
+			  <img src="{{baseImageUrl + data.gambar}}">
+			  <h2>{{data.nm_wisata}}</h2>
+			  <p>{{data.deskripsi}}</p>
 			</a>
 			
 
