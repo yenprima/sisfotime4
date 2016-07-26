@@ -58,19 +58,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'page/transportasi.html'
   })
  
-  .state('peta', {
-    url: '/peta',
-    templateUrl: 'page/peta.html'
-  })
- 
   .state('seni_budaya', {
     url: '/seni_budaya',
     templateUrl: 'page/seni_budaya.html'
-  })
- 
-  .state('souvenir', {
-    url: '/souvenir',
-    templateUrl: 'page/souvenir.html'
   })
  
   .state('kuliner', {
