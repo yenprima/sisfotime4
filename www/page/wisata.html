@@ -8,10 +8,17 @@
     </p>
 		<div class="list">
 
+<<<<<<< HEAD
 			<a class="item item-avatar" ng-repeat="buku in semua_buku" href="#">
 			  <img src="{{baseImageUrl + buku.gambar}}">
 			  <h2>{{buku.nm_wisata}}</h2>
 			  <p>{{buku.deskripsi}}</p>
+=======
+			<a class="item item-avatar" ng-repeat="data in semua_buku" href="#/detail-wisata/{{data.id}}">
+			  <img src="{{baseImageUrl + data.gambar}}">
+			  <h2>{{data.nm_wisata}}</h2>
+			  <p>{{data.deskripsi}}</p>
+>>>>>>> 4a5e4eda8ba7cf978f21552f29aff5749ff46a34
 			</a>
 			
 

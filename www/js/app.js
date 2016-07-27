@@ -58,25 +58,29 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers'])
     templateUrl: 'page/transportasi.html'
   })
  
+<<<<<<< HEAD
   .state('peta', {
     url: '/peta',
     templateUrl: 'page/peta.html',
 	controller: 'MapCtrl'
   })
  
+=======
+>>>>>>> 4a5e4eda8ba7cf978f21552f29aff5749ff46a34
   .state('seni_budaya', {
     url: '/seni_budaya',
     templateUrl: 'page/seni_budaya.html'
   })
  
-  .state('souvenir', {
-    url: '/souvenir',
-    templateUrl: 'page/souvenir.html'
-  })
- 
   .state('kuliner', {
     url: '/kuliner',
     templateUrl: 'page/kuliner.html'
+  })
+ 
+  .state('detail-wisata', {
+    url: '/detail-wisata/:kode',
+    templateUrl: 'page/detail-wisata.html',
+	controller: 'DetailWisata'
   });
  
   $urlRouterProvider.otherwise('/beranda');
