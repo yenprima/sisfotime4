@@ -3,7 +3,9 @@
 		<h1 class="title">Objek Wisata</h1>
 	</ion-header-bar>
 	<ion-content class="padding">
-		
+	<p align="center" class="item" ng-show="showLoader == true">
+      <img src="img/loader.gif" width="80" height="60"/>
+    </p>
 		<div class="list">
 
 			<a class="item item-avatar" ng-repeat="data in semua_buku" href="#/detail-wisata/{{data.id}}">
