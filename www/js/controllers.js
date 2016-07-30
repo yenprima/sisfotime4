@@ -103,4 +103,47 @@ angular.module('starter.controllers', [])
 		});
 	};
 	$scope.getDetailBuku();
+})
+
+.controller('MapController', function($scope, $state, $stateParams, $ionicLoading, $timeout) {
+ 
+ var lat = $stateParams.latitude;
+ var long = $stateParams.longitude;
+ 
+ $scope.coba = function(){
+	//alert('asd');		
+	location.reload();
+}
+ 
+
+ $scope.peta = function(){
+    google.maps.event.addDomListener(window, 'load', function() {
+        var myLatlng = new google.maps.LatLng(lat, long);
+ 
+        var mapOptions = {
+            center: myLatlng,
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+ 
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		
+        navigator.geolocation.getCurrentPosition(function(pos) {
+            map.setCenter(new google.maps.LatLng(lat, long));
+            var myLocation = new google.maps.Marker({
+                position: new google.maps.LatLng(lat, long),
+                map: map,
+                title: "Lokasi Saya"
+            });
+        });		
+		
+        $scope.map = map;			
+    }); 
+ }
+ 
+$timeout(function() {
+	//$scope.coba();	
+}, 3000)
+ 
+ $scope.peta();
 });
