@@ -110,11 +110,9 @@ angular.module('starter.controllers', [])
  var lat = $stateParams.latitude;
  var long = $stateParams.longitude;
  
- $scope.coba = function(){
-	//alert('asd');		
+ $scope.coba = function(){	
 	location.reload();
 }
- 
 
  $scope.peta = function(){
     google.maps.event.addDomListener(window, 'load', function() {
@@ -122,7 +120,7 @@ angular.module('starter.controllers', [])
  
         var mapOptions = {
             center: myLatlng,
-            zoom: 16,
+            zoom: 18,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
  
@@ -142,8 +140,9 @@ angular.module('starter.controllers', [])
  }
  
 $timeout(function() {
-	//$scope.coba();	
+	//$scope.coba();
 }, 3000)
  
- $scope.peta();
+$scope.peta();
+
 });
