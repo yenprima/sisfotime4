@@ -7,14 +7,14 @@ angular.module('starter.controllers', [])
 	$scope.getDetailBuku = function(){
 	};
 })
+
 .controller('SemuaBuku', function($scope,$http) {
-	$scope.baseUrl = 'http://hiwata.freevar.com/client/';
-	$scope.baseImageUrl = 'http://hiwata.freevar.com/images/';
-	alert("Gagal tersambung ke server !");
+	$scope.baseUrl = 'http://wisata-kalteng.eu5.org/aplikasi/';
+	$scope.baseImageUrl = 'http://wisata-kalteng.eu5.org/aplikasi/gambar/';
 	$scope.getSemuaBuku = function(){
 		$scope.showLoader = true;
 		$http.get(
-			$scope.baseUrl+'get-semua-buku.php'
+			$scope.baseUrl+'get-wisata.php'
 		).success(function(data){
 			$scope.semua_buku = data;
 			$scope.showLoader = false;
@@ -40,3 +40,26 @@ angular.module('starter.controllers', [])
 	};
 	$scope.getUsers();
 })
+
+.controller('DetailWisata', function($scope, $stateParams,$http) {
+	var kode = $stateParams.kode;
+	$scope.baseUrl = 'http://wisata-kalteng.eu5.org/aplikasi/';
+	$scope.getDetailBuku = function(){
+		$scope.showLoader = true;
+		$http.get(
+			$scope.baseUrl+'get-wisata.php',
+			{
+				params : {
+					id : kode
+				}				
+			}
+		).success(function(data){
+			$scope.wisata = data;
+			$scope.showLoader = false;
+		}).error(function(){
+			alert("Gagal tersambung ke server !");
+			$scope.showLoader = false;
+		});
+	};
+	$scope.getDetailBuku();
+});

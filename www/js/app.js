@@ -58,24 +58,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'page/transportasi.html'
   })
  
-  .state('peta', {
-    url: '/peta',
-    templateUrl: 'page/peta.html'
-  })
- 
   .state('seni_budaya', {
     url: '/seni_budaya',
     templateUrl: 'page/seni_budaya.html'
   })
  
-  .state('souvenir', {
-    url: '/souvenir',
-    templateUrl: 'page/souvenir.html'
-  })
- 
   .state('kuliner', {
     url: '/kuliner',
     templateUrl: 'page/kuliner.html'
+  })
+ 
+  .state('detail-wisata', {
+    url: '/detail-wisata/:kode',
+    templateUrl: 'page/detail-wisata.html',
+	controller: 'DetailWisata'
   });
  
   $urlRouterProvider.otherwise('/beranda');

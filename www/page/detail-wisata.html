@@ -1,0 +1,18 @@
+<ion-view view-title="Deskripsi">
+  <ion-content>
+  <div ng-repeat="data in wisata" class="list card">
+  <div class="item item-avatar">
+    <h2>{{data.nm_wisata}}</h2>
+  </div>
+
+  <div class="item item-image">
+    <img src="http://wisata-kalteng.eu5.org/aplikasi/gambar/{{data.gambar}}">
+  </div>
+
+  	<div class="item item-body">
+    {{data.deskripsi}}
+	</div>
+
+</div>
+  </ion-content>
+</ion-view>
