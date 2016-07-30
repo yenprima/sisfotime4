@@ -10,11 +10,11 @@ angular.module('starter.controllers', [])
 
 .controller('SemuaBuku', function($scope,$http) {
 	$scope.baseUrl = 'http://wisata-kalteng.eu5.org/aplikasi/';
-<<<<<<< HEAD
+
 	$scope.baseImageUrl = 'http://hiwata.freevar.com/images/';
-=======
+
 	$scope.baseImageUrl = 'http://wisata-kalteng.eu5.org/aplikasi/gambar/';
->>>>>>> 4a5e4eda8ba7cf978f21552f29aff5749ff46a34
+
 	$scope.getSemuaBuku = function(){
 		$scope.showLoader = true;
 		$http.get(
@@ -44,7 +44,7 @@ angular.module('starter.controllers', [])
 	};
 	$scope.getUsers();
 })
-<<<<<<< HEAD
+
 .controller('MapCtrl', function($scope, $cordovaGeolocation, $ionicLoading, $ionicPlatform) {
     $ionicPlatform.ready(function() {
          
@@ -79,8 +79,8 @@ angular.module('starter.controllers', [])
             console.log(err);
 			alert("map gagal loading");
         });
-    });               
-=======
+    });
+})	
 
 .controller('DetailWisata', function($scope, $stateParams,$http) {
 	var kode = $stateParams.kode;
@@ -103,5 +103,4 @@ angular.module('starter.controllers', [])
 		});
 	};
 	$scope.getDetailBuku();
->>>>>>> 4a5e4eda8ba7cf978f21552f29aff5749ff46a34
 });

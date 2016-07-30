@@ -58,15 +58,12 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers'])
     templateUrl: 'page/transportasi.html'
   })
  
-<<<<<<< HEAD
   .state('peta', {
     url: '/peta',
     templateUrl: 'page/peta.html',
 	controller: 'MapCtrl'
   })
  
-=======
->>>>>>> 4a5e4eda8ba7cf978f21552f29aff5749ff46a34
   .state('seni_budaya', {
     url: '/seni_budaya',
     templateUrl: 'page/seni_budaya.html'
